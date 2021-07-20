@@ -74,6 +74,7 @@ function selectCard() {
             console.log(freeCards.toString());
             break;
         case 2:
+            let info = " New game - click on any card. "
             if (selectedCard == randomCard) {
                 title.innerHTML = "You win. Gratz :)";
                 good++;
