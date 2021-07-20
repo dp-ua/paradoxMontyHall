@@ -71,7 +71,6 @@ function selectCard() {
                 if (index != randomCard && index != selectedCard) freeCards.push(card);
             });
             arrayRandElement(freeCards).classList.add("loose");
-            console.log(freeCards.toString());
             break;
         case 2:
             let info = " New game - click on any card. "
