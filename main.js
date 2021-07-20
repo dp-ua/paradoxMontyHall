@@ -76,10 +76,10 @@ function selectCard() {
         case 2:
             let info = " New game - click on any card. "
             if (selectedCard == randomCard) {
-                title.innerHTML = "You win. Gratz :)";
+                title.innerHTML = "You win. Gratz :)" + info;
                 good++;
             } else {
-                title.innerHTML = "Sorry, you loose :(";
+                title.innerHTML = "Sorry, you loose :(" + info;
                 bad++;
             }
             clearCards();
