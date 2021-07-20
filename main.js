@@ -103,7 +103,7 @@ let bad = 0;
 let round = 1;
 let randomCard = 0;
 let selectedCard = 0;
-let ver = "1.1";
+let ver = "1.2";
 
 console.log("Version: " + ver);
 startGame();
