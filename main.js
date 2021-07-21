@@ -118,7 +118,7 @@ let round = 1;
 let randomCard = 0;
 let selectedCard = 0;
 let results = [0, 0, 0];
-let ver = "1.5";
+let ver = "1.5.1";
 
 document.getElementById("version").innerText = "Version: " + ver;
 startGame();

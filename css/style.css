@@ -22,6 +22,7 @@ div.cards {
 }
 
 div.card {
+    cursor: pointer;
     height: 180px;
     margin-left: auto;
     margin-right: auto;
