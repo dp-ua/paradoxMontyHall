@@ -14,8 +14,10 @@ card3.addEventListener('click', () => chooseCard(card3));
 
 let cards = Array(card1, card2, card3);
 
-function getRandom() {
-    return Math.round(Math.random() * 2);
+function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function clearCards() {
@@ -36,7 +38,7 @@ function unselectCards() {
 function startGame() {
     title.innerHTML = "Choose card for the first time";
     round = 1;
-    randomCard = getRandom();
+    randomCard = getRandom(0, 2);
     changeResults();
     clearCards();
 }
