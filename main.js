@@ -2,7 +2,7 @@ const round1Text = "Раунд 1. Выберите карту";
 const round2Text = "Раунд 2. Я открыл одну из двух оставшихся карт. Выберите карту";
 const newGameText = " Для начала новой игры - нажмите на любую карту. ";
 const winnerText = "Вы выиграли приз :)";
-const looserText = "Извините, но вы проиграли :(";
+const looserText = "Вы проиграли :(";
 
 const card1 = document.getElementById("1");
 const card2 = document.getElementById("2");
@@ -125,7 +125,17 @@ let round = 1;
 let randomCard = 0;
 let selectedCard = 0;
 let results = [0, 0, 0];
-let ver = "1.6.1";
+
+function clearScope() {
+    good = 0;
+    bad = 0;
+    round = 1;
+    randomCard = 0;
+    selectedCard = 0;
+    results = [0, 0, 0];
+}
+let ver = "1.6.2";
 
 document.getElementById("version").innerText = "Version: " + ver;
+clearScope()
 startGame();
