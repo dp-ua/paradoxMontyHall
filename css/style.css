@@ -8,7 +8,6 @@ body {
 }
 
 .title {
-    margin-left: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +46,7 @@ div.select {
 }
 
 div.empty {
-    background-color: lightcyan;
+    background-color: rgb(112, 207, 207);
 }
 
 div.win {
@@ -58,19 +57,27 @@ div.loose {
     background-color: red;
 }
 
-div.results {
+div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+}
+
+div.result {
+    border: 5px solid #383333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.result {
-    width: 120px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+div.rules {
+    display: none;
 }
 
 .main {

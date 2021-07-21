@@ -36,7 +36,7 @@ function unselectCards() {
 }
 
 function startGame() {
-    title.innerHTML = "Choose card for the first time";
+    title.innerText = "Choose card for the first time";
     round = 1;
     randomCard = getRandom(0, 2);
     changeResults();
@@ -44,8 +44,17 @@ function startGame() {
 }
 
 function changeResults() {
-    winText.innerText = good == 0 ? 0 : "Count: " + good + ", " + Math.round((good / (good + bad)) * 100, 0) + "%";
-    looseText.innerText = bad == 0 ? 0 : "Count: " + bad + ", " + Math.round((bad / (good + bad)) * 100, 0) + "%";
+
+    winText.innerText = good == 0 ? 0 : good + " - " + Math.round((good / (good + bad)) * 100, 0) + "%";
+    looseText.innerText = bad == 0 ? 0 : bad + " - " + Math.round((bad / (good + bad)) * 100, 0) + "%";
+
+    let sumResults = 0;
+    results.forEach(r => sumResults += r);
+
+    results.forEach(function(result, index, cards) {
+        document.getElementById("card" + index).innerText = result == 0 ? 0 : result + " - " + Math.round((result / sumResults) * 100, 0) + "%";
+    });
+
 }
 
 function chooseCard(card) {
@@ -84,7 +93,7 @@ function selectCard() {
                 bad++;
             }
             clearCards();
-            cards.forEach(function(card, index, cards) {
+            cards.forEach(function(card, index) {
                 if (index == randomCard) {
                     card.classList.add("win");
                 } else {
@@ -92,9 +101,12 @@ function selectCard() {
                 }
             });
             round = 3;
+            results[randomCard]++;
             changeResults();
+
             break;
         case 3:
+
             startGame();
             break;
     }
@@ -105,7 +117,8 @@ let bad = 0;
 let round = 1;
 let randomCard = 0;
 let selectedCard = 0;
-let ver = "1.2";
+let results = [0, 0, 0];
+let ver = "1.3";
 
 console.log("Version: " + ver);
 startGame();
