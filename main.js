@@ -1,3 +1,9 @@
+const round1Text = "Раунд 1. Выберите карту";
+const round2Text = "Раунд 2. Я открыл одну из двух оставшихся карт. Выберите карту";
+const newGameText = " Для начала новой игры - нажмите на любую карту. ";
+const winnerText = "Вы выиграли приз :)";
+const looserText = "Извините, но вы проиграли :(";
+
 const card1 = document.getElementById("1");
 const card2 = document.getElementById("2");
 const card3 = document.getElementById("3");
@@ -36,7 +42,7 @@ function unselectCards() {
 }
 
 function startGame() {
-    title.innerText = "Choose card for the first time";
+    title.innerText = round1Text;
     round = 1;
     randomCard = getRandom(0, 2);
     changeResults();
@@ -72,10 +78,11 @@ function arrayRandElement(arr) {
     return arr[rand];
 }
 
+
 function selectCard() {
     switch (round) {
         case 1:
-            title.innerHTML = "I opened one another card. You can change your mide. Choose card";
+            title.innerHTML = round2Text;
             round = 2;
             let freeCards = [];
             cards.forEach(function(card, index, cards) {
@@ -84,12 +91,12 @@ function selectCard() {
             arrayRandElement(freeCards).classList.add("loose");
             break;
         case 2:
-            let info = " New game - click on any card. "
+            let info = newGameText
             if (selectedCard == randomCard) {
-                title.innerHTML = "You win. Gratz :)" + info;
+                title.innerHTML = winnerText + info;
                 good++;
             } else {
-                title.innerHTML = "Sorry, you loose :(" + info;
+                title.innerHTML = looserText + info;
                 bad++;
             }
             clearCards();
@@ -118,7 +125,7 @@ let round = 1;
 let randomCard = 0;
 let selectedCard = 0;
 let results = [0, 0, 0];
-let ver = "1.5.1";
+let ver = "1.6.1";
 
 document.getElementById("version").innerText = "Version: " + ver;
 startGame();

@@ -78,7 +78,27 @@ div.result {
 }
 
 div.rules {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.rules-title {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+div.rule {
+    line-height: 1.7;
+    text-align: justify;
+    background-color: bisque;
+    align-content: center;
+    width: 550px;
+    height: auto;
+    border: 2px solid #383333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 20px;
+    padding: 10px 10px 0px 30px;
 }
 
 .main {
