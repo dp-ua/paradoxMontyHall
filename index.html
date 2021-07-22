@@ -12,63 +12,66 @@
 </head>
 
 <body>
-    <div class="container main">
-        <div class="title">
-            <p id="title"></p><br/>
-        </div>
-    </div>
-    <div class="container main">
-        <div class="cards">
-            <div class="card" id=1>1</div>
-            <div class="card" id=2>2</div>
-            <div class="card" id=3>3</div>
-        </div>
-    </div>
-    <div class="container">
-        <p>RESULTS</p>
-    </div>
-    <div class="container results">
-        <div class="result win">
-            <p id="winText">win</p>
-        </div>
-        <div class="result loose">
-            <p id="looseText">loose</p>
-        </div>
-    </div>
-    <div class="container results">
-        <div class="result empty">
-            <p id="card0"> 0</p>
-        </div>
-        <div class="result empty">
-            <p id="card1"> 0</p>
-        </div>
-        <div class="result empty">
-            <p id="card2"> 0</p>
-        </div>
-    </div>
-    <div class="rules">
-        <div class="rules-title">Правила</div>
-        <div class="rule">
-            <li>Вы играете в викторину. </li>
-            <li>Вашему вниманию предлагаются три карты. За одной из них находится приз. </li>
-            <li>В первом раунде вы можете выбрать любую из трех карт. </li>
-            <li>После этого я открою одну из двух оставшихся, где приза нет. </li>
-            <li> Во втором раунде вы можете подтвердить свой выбор или изменить решение и выбрать другую карту.</li>
-            <li> Удачи :)</li>
+    <div class="parent">
+        <div class="block">
+            <div class="game">
+                <div class="game-title" id="title">
 
-
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-block">
-                <p id="version">test</p>
-                <!-- /.social-links -->
+                </div>
+                <div class="game-cards" id="cards">
+                    <div class="card" id=1>1</div>
+                    <div class="card" id=2>2</div>
+                    <div class="card" id=3>3</div>
+                </div>
+                <div class="game-newgame hide" id="newGame">
+                    Продолжить - клик на любой карте </div>
             </div>
-            <!-- /.footer-block -->
+            <div class="results">
+                <div class="container ">
+                    <div class="result win">
+                        <p id="winText">win</p>
+                    </div>
+                    <div class="result loose">
+                        <p id="looseText">loose</p>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="result empty">
+                        <p id="card0"> 0</p>
+                    </div>
+                    <div class="result empty">
+                        <p id="card1"> 0</p>
+                    </div>
+                    <div class="result empty">
+                        <p id="card2"> 0</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="rules">
+                <div class="rules-title">Правила</div>
+                <div class="rule">
+                    <li>Вы играете в викторину. </li>
+                    <li>Вашему вниманию предлагаются три карты. За одной из них находится приз. </li>
+                    <li>В первом раунде вы можете выбрать любую из трех карт. </li>
+                    <li>После этого я открою одну из двух оставшихся, где приза нет. </li>
+                    <li> Во втором раунде вы можете подтвердить свой выбор или изменить решение и выбрать другую карту.</li>
+                    <li> Удачи :)</li>
+
+
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-block">
+                        <p id="version">test</p>
+                        <!-- /.social-links -->
+                    </div>
+                    <!-- /.footer-block -->
+                </div>
+            </footer>
         </div>
-    </footer>
+    </div>
     <script src="main.js"></script>
 </body>
 

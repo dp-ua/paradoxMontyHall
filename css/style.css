@@ -1,33 +1,61 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    padding-top: 44px;
-}
-
-.title {
+.parent {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: top;
+    align-content: center;
+    justify-content: center;
+    overflow: scroll;
 }
 
-div.cards {
-    height: 10em;
+.block {
+    width: 400px;
+    border: 2px solid #383333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.game-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    text-align: center;
+    height: 70px;
+    border: 2px solid #383333;
+    border-radius: 20px;
+    width: 380px;
+    margin: 10px 0px 20px 0px;
+    padding: 0px 20px 0px 20px;
+    background-color: bisque;
+}
+
+div.hide {
+    visibility: hidden;
+}
+
+div.game-cards {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
 }
 
 div.card {
     cursor: pointer;
     height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em;
-    border: 5px solid #383333;
+    width: 32%;
+    border: 3px solid #383333;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
     border-radius: 20px;
     font-size: 16px;
@@ -36,6 +64,38 @@ div.card {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 10rem;
+}
+
+div.game-newgame {
+    cursor: pointer;
+    height: 40px;
+    width: 96%;
+    border: 0px;
+    color: white;
+    background-color: #3a45dd;
+    border: 3px solid #383333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    padding-top: 44px;
 }
 
 div.new {
@@ -52,10 +112,12 @@ div.empty {
 
 div.win {
     background-color: greenyellow;
+    color: black;
 }
 
 div.loose {
     background-color: red;
+    color: white;
 }
 
 div.container {
@@ -89,11 +151,11 @@ div.rules-title {
 }
 
 div.rule {
-    line-height: 1.7;
+    line-height: 1.2;
     text-align: justify;
     background-color: bisque;
     align-content: center;
-    width: 550px;
+    width: 100%;
     height: auto;
     border: 2px solid #383333;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
@@ -101,6 +163,9 @@ div.rule {
     padding: 10px 10px 10px 30px;
 }
 
+
+/*
 .main {
-    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
+    width: 700px;
 }
+*/
