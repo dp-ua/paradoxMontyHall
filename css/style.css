@@ -19,6 +19,7 @@
 }
 
 .game {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +31,7 @@ div.game-title {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 70px;
+    height: 80px;
     border: 2px solid #383333;
     border-radius: 20px;
     width: 96%;
@@ -148,6 +149,10 @@ div.rules {
 div.rules-title {
     font-size: 150%;
     font-weight: bold;
+}
+
+.footer {
+    top: -20px;
 }
 
 div.rule {
