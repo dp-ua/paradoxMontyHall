@@ -135,7 +135,7 @@ function clearScope() {
     selectedCard = 0;
     results = [0, 0, 0];
 }
-let ver = "1.6.2";
+let ver = "1.6.3";
 
 document.getElementById("version").innerText = "Version: " + ver;
 clearScope()
