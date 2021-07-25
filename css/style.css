@@ -52,6 +52,28 @@ div.game-cards {
     width: 96%;
 }
 
+div.langs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0 -10px 5px;
+}
+
+div.lang {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #383333;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 15px 0;
+}
+
 div.card {
     cursor: pointer;
     height: 180px;
@@ -106,6 +128,10 @@ div.new {
 
 div.select {
     background-color: #686db4;
+}
+
+div.selectLang {
+    background-color: #b7eeb7;
 }
 
 div.empty {
