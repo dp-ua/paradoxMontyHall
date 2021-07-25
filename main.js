@@ -65,7 +65,6 @@ function changeResults() {
 }
 
 function chooseCard(card) {
-
     if (!card.classList.contains("loose") || round == 3) {
         unselectCards();
         card.classList.add("select");
@@ -135,8 +134,44 @@ function clearScope() {
     selectedCard = 0;
     results = [0, 0, 0];
 }
-let ver = "1.6.5";
+let ver = "1.6.6";
+
+/*
+    test just random choosen card. 
+*/
+function testRandom() {
+    let card = cards[getRandom(0, 2)];
+    console.log("chosen:" + card.innerHTML);
+    chooseCard(card);
+    chooseCard(card);
+    chooseCard(card);
+}
+
+/*
+first choice - random card. 
+second - change to another free. 
+*/
+function testChange() {
+    let card = cards[getRandom(0, 2)];
+    let cardToChange;
+    chooseCard(card);
+    cards.forEach(c => {
+        if (!c.classList.contains("loose") && !c.classList.contains("select")) cardToChange = c;
+    });
+    console.log("Choice :" + card.innerText + ">>>" + cardToChange.innerText);
+    chooseCard(cardToChange);
+    chooseCard(cardToChange);
+}
 
 document.getElementById("version").innerText = "Version: " + ver;
 clearScope()
 startGame();
+
+
+/* remove comment if you whant to run tests
+
+for (let i = 0; i < 1000; i++) {
+    testChoice();
+}
+
+ */
