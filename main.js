@@ -32,7 +32,7 @@ function round2Text() {
 function winnerText() {
     switch (language) {
         case "ua":
-            return "Ві виграли :)";
+            return "Ви виграли :)";
         case "en":
             return "You won :)";
         default:
@@ -254,7 +254,7 @@ function clearScope() {
     selectedCard = 0;
     results = [0, 0, 0];
 }
-let ver = "2.0.1";
+let ver = "2.0.2";
 
 /*
     test just random choosen card. 
