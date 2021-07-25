@@ -1,7 +1,11 @@
 function getLang() {
     var url = location.href;
     let lang = url.match(/lang=([^&]+)/);
-    return lang == null ? "ru" : lang[1].toLocaleLowerCase();
+    let browserLang = window.navigator ? (window.navigator.language ||
+        window.navigator.systemLanguage ||
+        window.navigator.userLanguage) : "ru";
+    browserLang = browserLang.substr(0, 2).toLowerCase();
+    return lang == null ? browserLang : lang[1].toLocaleLowerCase();
 }
 
 let language = getLang();
