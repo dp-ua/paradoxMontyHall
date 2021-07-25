@@ -1,3 +1,5 @@
+let ver = "2.1.1";
+
 function getLang() {
     var url = location.href;
     let lang = url.match(/lang=([^&]+)/);
@@ -258,7 +260,6 @@ function clearScope() {
     selectedCard = 0;
     results = [0, 0, 0];
 }
-let ver = "2.0.2";
 
 /*
     test just random choosen card. 
