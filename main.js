@@ -1,4 +1,4 @@
-let ver = "2.1.1";
+let ver = "2.1.2";
 
 function getLang() {
     var url = location.href;
